@@ -1,32 +1,30 @@
-const { Sequelize,DataTypes } = require("sequelize")
-
-const sequelize = new Sequelize({
-    database:process.env.DB,
-    host:process.env.HOST,
-    password:process.env.PASSWORD,
-    username:process.env.USERNAME
-})
+const sequelize = require("../config/db.conf")
 
 const User = sequelize.define("User",{
 
     id:{
-        type:DataTypes.INTEGER
+        type:DataTypes.INTEGER,
+        allowNull:false
 
     },
 
     firstName:{
-        type:DataTypes.STRING
+        type:DataTypes.STRING,
+        allowNull:false
     },
 
     lastName:{
-        type:DataTypes.STRING
+        type:DataTypes.STRING,
+        allowNull:false
     },
 
     email:{
-        type:DataTypes.STRING
+        type:DataTypes.STRING,
+        allowNull:false
     },
 
     password:{
-        type:DataTypes.STRING
+        type:DataTypes.STRING,
+        allowNull:false
     }
 })
