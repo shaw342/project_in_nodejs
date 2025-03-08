@@ -1,3 +1,4 @@
+const { DataTypes } = require("sequelize")
 const sequelize = require("../config/db.conf")
 
 const User = sequelize.define("User",{
